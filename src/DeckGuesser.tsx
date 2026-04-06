@@ -3,8 +3,7 @@
 import { DeckListType } from "moxfield-api";
 import { getAllNonlandCards } from "./utils/getAllNonlandCards";
 import { useState } from "react";
-import Image from "next/image";
-import { Base64PlaceholderImage } from "./Base64PlaceholderImage";
+import { CardImage } from "./CardImage";
 
 interface DeckGuesserProps {
   deck: DeckListType;
@@ -41,22 +40,21 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
 
   return (
     <div className="flex flex-col items-center justify-center gap-2">
-      <Image
-        src={
-          guessState === "correct" ? commanderCardImageUrl : randomCardImageUrl
-        }
-        placeholder={Base64PlaceholderImage}
-        height={350}
-        width={250}
-        alt={
-          guessState === "correct"
-            ? commander.name
-            : randomNonlandCard.card.name
-        }
-        className="rounded-xl h-auto max-w-full"
-        unoptimized
-        priority
-      />
+      {guessState === "correct" ? (
+        <CardImage
+          key="commander"
+          src={commanderCardImageUrl}
+          alt={commander.name}
+          className="rounded-xl h-auto max-w-full"
+        />
+      ) : (
+        <CardImage
+          key="random-card"
+          src={randomCardImageUrl}
+          alt={randomNonlandCard.card.name}
+          className="rounded-xl h-auto max-w-full"
+        />
+      )}
       {guessState !== "correct" && (
         <form
           onSubmit={handleSubmit}
