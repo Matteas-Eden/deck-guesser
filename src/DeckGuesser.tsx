@@ -65,6 +65,8 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({
             className="border-2 border-ctp-white rounded-xl p-2"
             type="text"
             name="guess"
+            autoFocus
+            autoComplete="off"
           />
           <button
             type="submit"
