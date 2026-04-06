@@ -1,26 +1,24 @@
 "use client";
 
-import { DeckListType } from "moxfield-api";
-import { getAllNonlandCards } from "./utils/getAllNonlandCards";
+import { CardType } from "moxfield-api";
 import { useState } from "react";
 import { CardImage } from "./components/CardImage";
 import { PlayAgainButton } from "./components/PlayAgainButton";
 
 interface DeckGuesserProps {
-  deck: DeckListType;
+  randomCard: CardType;
+  commander: CardType;
 }
 
 type GuessState = "pending" | "correct" | "incorrect";
 
-export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
-  const nonlandCards = getAllNonlandCards(deck);
-  const [randomNonlandCard] = useState(
-    () => nonlandCards[Math.floor(Math.random() * nonlandCards.length)],
-  );
-  const commander = Object.values(deck.boards.commanders.cards)[0].card;
+export const DeckGuesser: React.FC<DeckGuesserProps> = ({
+  randomCard,
+  commander,
+}) => {
   const [guessState, setGuessState] = useState<GuessState>("pending");
 
-  const randomCardImageUrl = `https://api.scryfall.com/cards/${randomNonlandCard.card.scryfall_id}?format=image&version=normal`;
+  const randomCardImageUrl = `https://api.scryfall.com/cards/${randomCard.scryfall_id}?format=image&version=normal`;
   const commanderCardImageUrl = `https://api.scryfall.com/cards/${commander.scryfall_id}?format=image&version=normal`;
 
   const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
@@ -50,14 +48,12 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
           key="commander"
           src={commanderCardImageUrl}
           alt={commander.name}
-          className="rounded-xl h-auto max-w-full"
         />
       ) : (
         <CardImage
           key="random-card"
           src={randomCardImageUrl}
-          alt={randomNonlandCard.card.name}
-          className="rounded-xl h-auto max-w-full"
+          alt={randomCard.name}
         />
       )}
       {guessState !== "correct" && (
