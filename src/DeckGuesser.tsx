@@ -21,9 +21,20 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
   const randomCardImageUrl = `https://api.scryfall.com/cards/${randomNonlandCard.card.scryfall_id}?format=image&version=normal`;
   const commanderCardImageUrl = `https://api.scryfall.com/cards/${commander.scryfall_id}?format=image&version=normal`;
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setGuessState("correct");
+
+    const formData = new FormData(e.currentTarget);
+    const guess = formData.get("guess") as string;
+
+    const commanderName = commander.name.split(",")[0];
+
+    if (commanderName.toLowerCase().includes(guess.toLowerCase())) {
+      setGuessState("correct");
+      return;
+    }
+
+    setGuessState("incorrect");
   };
 
   return (
@@ -36,18 +47,29 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
         alt="Guess this card!"
         className="rounded-xl"
       />
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col justify-center gap-2"
-      >
-        <input className="border-2 border-white rounded-xl" type="text" />
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
+      {guessState !== "correct" && (
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col justify-center gap-2"
         >
-          Guess!
-        </button>
-      </form>
+          <input
+            className="border-2 border-white rounded-xl"
+            type="text"
+            name="guess"
+          />
+          <button
+            type="submit"
+            className={`${guessState === "incorrect" ? "bg-red-500 hover:bg-red-700" : "bg-blue-500 hover:bg-blue-700"} text-white font-bold py-2 px-4 rounded cursor-pointer`}
+          >
+            Guess!
+          </button>
+        </form>
+      )}
+      {guessState === "correct" && (
+        <div className="text-center">
+          <h1 className="text-5xl font-bold">Correct!</h1>
+        </div>
+      )}
     </div>
   );
 };
