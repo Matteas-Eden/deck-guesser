@@ -4,6 +4,7 @@ import { DeckListType } from "moxfield-api";
 import { getAllNonlandCards } from "./utils/getAllNonlandCards";
 import { useState } from "react";
 import { CardImage } from "./CardImage";
+import { PlayAgainButton } from "./PlayAgainButton";
 
 interface DeckGuesserProps {
   deck: DeckListType;
@@ -74,8 +75,9 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
         </form>
       )}
       {guessState === "correct" && (
-        <div className="text-center">
+        <div className="flex flex-col gap-2 text-center">
           <h1 className="text-5xl font-bold">Correct!</h1>
+          <PlayAgainButton />
         </div>
       )}
     </div>
