@@ -1,40 +1,96 @@
 {
-    "decks": [
-        {
-            "name": "Aminatou",
-            "id": "epS0WGf-yEidzLQPIUznDQ"
-        },
-        {
-            "name": "Ardyn",
-            "id": "5l_2xIf3q0Szc4mGf-sQzg"
-        },
-        {
-            "name": "Noctis, Lucis Caelum",
-            "id": "vp25L2dA3U2KyWcFsEkaTQ"
-        },
-        {
-            "name": "Asmoranomardicadaistinaculdacar",
-            "id": "_6pUn4kL2EqRdJTE7FovDA"
-        },
-        {
-            "name": "Azami",
-            "id": "HGeP8DNJ6UCt2ws96kYAaw"
-        },
-        {
-            "name": "Baeloth",
-            "id": "RqDQ23OIH0COq7uKklHAWg"
-        },
-        {
-            "name": "Bilbo",
-            "id": "EWptCsr5sUCrkIGFMb-pZA"
-        },
-        {
-            "name": "Vadrik, Astral Archmage",
-            "id": "ty9V8lQKkUK3Fp2TjIWffw"
-        },
-        {
-            "name": "Tamiyo, Inquisitive Student",
-            "id": "tgeepMD5Bk2Ct2g2ht9aew"
-        }
-    ]
+  "decks": [
+    {
+      "name": "Aminatou, Veil Piercer",
+      "id": "epS0WGf-yEidzLQPIUznDQ"
+    },
+    {
+      "name": "Ardyn Izunia",
+      "id": "5l_2xIf3q0Szc4mGf-sQzg"
+    },
+    {
+      "name": "Noctis Lucis Caelum",
+      "id": "vp25L2dA3U2KyWcFsEkaTQ"
+    },
+    {
+      "name": "Asmoranomardicadaistinaculdacar",
+      "id": "_6pUn4kL2EqRdJTE7FovDA"
+    },
+    {
+      "name": "Azami, Lady of Scrolls",
+      "id": "HGeP8DNJ6UCt2ws96kYAaw"
+    },
+    {
+      "name": "Baeloth Barrityl, Entertainer",
+      "id": "RqDQ23OIH0COq7uKklHAWg"
+    },
+    {
+      "name": "Bilbo, Birthday Celebrant",
+      "id": "EWptCsr5sUCrkIGFMb-pZA"
+    },
+    {
+      "name": "Bruvac the Grandiloquent",
+      "id": "dBvFaCPSxE6DnIawPSrVjQ"
+    },
+    {
+      "name": "Commodore Guff",
+      "id": "9P48PP7vJUGJ4ch66N1Phw"
+    },
+    {
+      "name": "Elminster",
+      "id": "k3xft0CL40eXJrkYYjrRpg"
+    },
+    {
+      "name": "Kykar, Wind's Fury",
+      "id": "TP197XwM_0qzpifP64XNrA"
+    },
+    {
+      "name": "Loot, Exuberant Explorer",
+      "id": "gfqHyml03UK9APRWsA50-g"
+    },
+    {
+      "name": "Melek, Reforged Researcher",
+      "id": "gN1VOLxdh0y39IFBg2vlvg"
+    },
+    {
+      "name": "Meren of Clan Nel Toth",
+      "id": "saHcDErzwUae34egb9fNfQ"
+    },
+    {
+      "name": "Niv-Mizzet, Visionary",
+      "id": "3io_57hSkU26gVleNtv9-w"
+    },
+    {
+      "name": "Saruman of Many Colors",
+      "id": "Gd9ISR1Cg0aZ0E3T8np9KA"
+    },
+    {
+      "name": "Stella Lee, Wild Card",
+      "id": "1UGgq1-2sUOlQXBJhUK-7Q"
+    },
+    {
+      "name": "Tamiyo, Inquisitive Student",
+      "id": "tgeepMD5Bk2Ct2g2ht9aew"
+    },
+    {
+      "name": "Vadrik, Astral Archmage",
+      "id": "ty9V8lQKkUK3Fp2TjIWffw"
+    },
+    {
+      "name": "Voja, Jaws of the Conclave",
+      "id": "ylLRsDTLrUe-USYwPUl94w"
+    },
+    {
+      "name": "Will Kenrith & Rowan Kenrith",
+      "id": "E6iVI6Jep0iGliwVLoMYbg"
+    },
+    {
+      "name": "Wyll, Blade of Frontiers",
+      "id": "Gp5e7HpMvkuAeZRF7oGPaw"
+    },
+    {
+      "name": "Yorion, Sky Nomad",
+      "id": "rKQRJhuZOEaWIT_EuDhV_Q"
+    }
+  ]
 }
