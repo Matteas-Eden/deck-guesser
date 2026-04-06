@@ -1,9 +1,9 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { getRandomDeckId } from "./utils/getRandomDeckId";
+import { getRandomDeckId } from "../utils/getRandomDeckId";
 
-export const PlayAgainButton = () => {
+export const StartButton = () => {
   const { push } = useRouter();
 
   const handleClick = () => {
@@ -15,7 +15,7 @@ export const PlayAgainButton = () => {
       onClick={handleClick}
       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer"
     >
-      Play Again?
+      Start
     </button>
   );
 };

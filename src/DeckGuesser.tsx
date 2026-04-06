@@ -3,8 +3,8 @@
 import { DeckListType } from "moxfield-api";
 import { getAllNonlandCards } from "./utils/getAllNonlandCards";
 import { useState } from "react";
-import { CardImage } from "./CardImage";
-import { PlayAgainButton } from "./PlayAgainButton";
+import { CardImage } from "./components/CardImage";
+import { PlayAgainButton } from "./components/PlayAgainButton";
 
 interface DeckGuesserProps {
   deck: DeckListType;

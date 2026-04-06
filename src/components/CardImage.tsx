@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Base64PlaceholderImage } from "./Base64PlaceholderImage";
+import { MTGCardBackBase64 } from "../MTGCardBackBase64";
 
 interface CardImageProps {
   src: string;
@@ -11,7 +11,7 @@ export const CardImage = ({ src, alt, className }: CardImageProps) => {
   return (
     <Image
       src={src}
-      placeholder={Base64PlaceholderImage}
+      placeholder={MTGCardBackBase64}
       height={350}
       width={250}
       alt={alt}

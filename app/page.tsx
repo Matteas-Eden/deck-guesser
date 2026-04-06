@@ -1,4 +1,4 @@
-import { StartButton } from "@/src/StartButton";
+import { StartButton } from "@/src/components/StartButton";
 
 const Home = () => {
   return (
