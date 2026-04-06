@@ -4,18 +4,17 @@ import { MTGCardBackBase64 } from "../MTGCardBackBase64";
 interface CardImageProps {
   src: string;
   alt: string;
-  className: string;
 }
 
-export const CardImage = ({ src, alt, className }: CardImageProps) => {
+export const CardImage = ({ src, alt }: CardImageProps) => {
   return (
     <Image
       src={src}
       placeholder={MTGCardBackBase64}
-      height={350}
-      width={250}
+      height={480}
+      width={350}
       alt={alt}
-      className={className}
+      className="rounded-2xl"
       unoptimized
       priority
     />
