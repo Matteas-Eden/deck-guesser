@@ -29,7 +29,11 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
     const formData = new FormData(e.currentTarget);
     const guess = formData.get("guess") as string;
 
-    const commanderName = commander.name.split(",")[0];
+    // Some commanders (like ones from Final Fantasy) are reprints of existing cards
+    // and therefore need to use the flavour name instead
+    const commanderName = commander.flavor_name
+      ? commander.flavor_name.split(",")[0]
+      : commander.name.split(",")[0];
 
     if (commanderName.toLowerCase().includes(guess.toLowerCase())) {
       setGuessState("correct");
