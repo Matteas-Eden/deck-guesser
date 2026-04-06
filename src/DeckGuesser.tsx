@@ -40,7 +40,7 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center gap-2">
       <Image
         src={
           guessState === "correct" ? commanderCardImageUrl : randomCardImageUrl
@@ -48,8 +48,14 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
         placeholder={Base64PlaceholderImage}
         height={350}
         width={250}
-        alt="Guess this card!"
-        className="rounded-xl"
+        alt={
+          guessState === "correct"
+            ? commander.name
+            : randomNonlandCard.card.name
+        }
+        className="rounded-xl h-auto max-w-full"
+        unoptimized
+        priority
       />
       {guessState !== "correct" && (
         <form
@@ -57,7 +63,7 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({ deck }) => {
           className="flex flex-col justify-center gap-2"
         >
           <input
-            className="border-2 border-white rounded-xl"
+            className="border-2 border-white rounded-xl p-2"
             type="text"
             name="guess"
           />

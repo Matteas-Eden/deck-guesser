@@ -10,7 +10,7 @@ const Game: React.FC<GameProps> = async ({ params }) => {
 
   const moxfield = new MoxfieldApi();
 
-  const deck = await moxfield.deckList.findById("ty9V8lQKkUK3Fp2TjIWffw");
+  const deck = await moxfield.deckList.findById(id);
 
   return (
     <div className="flex flex-col items-center justify-center h-full">
