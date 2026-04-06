@@ -1,6 +1,7 @@
 {
   "version": "5",
   "specifiers": {
+    "npm:@catppuccin/tailwindcss@1": "1.0.0",
     "npm:@tailwindcss/postcss@4": "4.2.2",
     "npm:@types/node@20": "20.19.39",
     "npm:@types/react-dom@19": "19.2.3_@types+react@19.2.14",
@@ -138,6 +139,9 @@
         "@babel/helper-string-parser",
         "@babel/helper-validator-identifier"
       ]
+    },
+    "@catppuccin/tailwindcss@1.0.0": {
+      "integrity": "sha512-l8pOlcYe2ncGd8a1gUmL5AHmKlxR2+CHuG5kt4Me6IZwzntW1DoLmj89BH+DcsPHBsdDGLrTSv35emlYyU3FeQ=="
     },
     "@emnapi/core@1.9.2": {
       "integrity": "sha512-UC+ZhH3XtczQYfOlu3lNEkdW/p4dsJ1r/bP7H8+rhao3TTTMO1ATq/4DdIi23XuGoFY+Cz0JmCbdVl0hz9jZcA==",
@@ -2827,6 +2831,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@catppuccin/tailwindcss@1",
         "npm:@tailwindcss/postcss@4",
         "npm:@types/node@20",
         "npm:@types/react-dom@19",

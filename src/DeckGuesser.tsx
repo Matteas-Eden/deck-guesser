@@ -62,13 +62,13 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({
           className="flex flex-col justify-center gap-2"
         >
           <input
-            className="border-2 border-white rounded-xl p-2"
+            className="border-2 border-ctp-white rounded-xl p-2"
             type="text"
             name="guess"
           />
           <button
             type="submit"
-            className={`${guessState === "incorrect" ? "bg-red-500 hover:bg-red-700" : "bg-blue-500 hover:bg-blue-700"} text-white font-bold py-2 px-4 rounded cursor-pointer`}
+            className={`${guessState === "incorrect" ? "bg-ctp-red-950 hover:bg-ctp-red-700" : "bg-ctp-blue-950 hover:bg-ctp-blue-700"} text-ctp-white font-bold py-2 px-4 rounded cursor-pointer latte`}
           >
             Guess!
           </button>
