@@ -1,15 +1,13 @@
 "use client";
-import deckData from "@/public/decks.json";
+
 import { useRouter } from "next/navigation";
+import { getRandomDeckId } from "./utils/getRandomDeckId";
 
 export const PlayAgainButton = () => {
   const { push } = useRouter();
 
   const handleClick = () => {
-    const { decks } = deckData;
-    const randomID = decks[Math.floor(Math.random() * decks.length)].id;
-
-    push(`/game/${randomID}`);
+    push(`/game/${getRandomDeckId()}`);
   };
 
   return (
