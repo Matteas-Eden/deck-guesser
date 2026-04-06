@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cards.scryfall.io",
+        hostname: "api.scryfall.com",
         port: "",
       },
     ],
