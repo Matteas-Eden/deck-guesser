@@ -9,7 +9,7 @@ export const getAllNonlandCards = (deck: DeckListType) => {
 
   return cardEntries.filter(
     (entry) =>
-      entry.card.type_line !== "Land" &&
+      !entry.card.type_line?.includes("Land") &&
       !excludedCards.includes(entry.card.name),
   );
 };
