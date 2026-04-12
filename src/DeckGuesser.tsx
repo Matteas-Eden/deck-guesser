@@ -5,6 +5,7 @@ import { useState } from "react";
 import { CardImage } from "./components/CardImage";
 import { PlayAgainButton } from "./components/PlayAgainButton";
 import { GuessForm } from "./components/GuessForm";
+import { Hints } from "./components/Hints";
 
 interface DeckGuesserProps {
   randomCard: CardType;
@@ -61,10 +62,13 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({
         />
       )}
       {guessState !== "correct" && (
-        <GuessForm
-          showIncorrect={guessState === "incorrect"}
-          handleSubmit={handleSubmit}
-        />
+        <div className="flex flex-col gap-2">
+          <GuessForm
+            showIncorrect={guessState === "incorrect"}
+            handleSubmit={handleSubmit}
+          />
+          <Hints commanderCard={commander} />
+        </div>
       )}
       {guessState === "correct" && (
         <div className="flex flex-col gap-2 text-center">

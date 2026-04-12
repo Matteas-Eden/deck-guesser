@@ -17,7 +17,7 @@ export const GuessForm: React.FC<GuessFormProps> = ({
     />
     <button
       type="submit"
-      className={`${showIncorrect ? "bg-ctp-red-950 hover:bg-ctp-red-700" : "bg-ctp-blue-950 hover:bg-ctp-blue-700"} text-ctp-white font-bold py-2 px-4 rounded cursor-pointer latte`}
+      className={`${showIncorrect ? "bg-ctp-red-950 hover:bg-ctp-red-700" : "bg-ctp-blue-950 hover:bg-ctp-blue-700"} text-ctp-white text-xl font-bold py-1 px-4 rounded cursor-pointer latte`}
     >
       Guess!
     </button>
