@@ -4,6 +4,7 @@ import { CardType } from "moxfield-api";
 import { useState } from "react";
 import { CardImage } from "./components/CardImage";
 import { PlayAgainButton } from "./components/PlayAgainButton";
+import { GuessForm } from "./components/GuessForm";
 
 interface DeckGuesserProps {
   randomCard: CardType;
@@ -60,24 +61,10 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({
         />
       )}
       {guessState !== "correct" && (
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col justify-center gap-2"
-        >
-          <input
-            className="border-2 border-ctp-surface2 hover:border-ctp-text focus:border-ctp-text rounded-xl p-2 h-12 w-full border-solid bg-ctp-mantle font-(family-name:--font-geist-sans) [outline:none]"
-            type="text"
-            name="guess"
-            autoFocus
-            autoComplete="off"
-          />
-          <button
-            type="submit"
-            className={`${guessState === "incorrect" ? "bg-ctp-red-950 hover:bg-ctp-red-700" : "bg-ctp-blue-950 hover:bg-ctp-blue-700"} text-ctp-white font-bold py-2 px-4 rounded cursor-pointer latte`}
-          >
-            Guess!
-          </button>
-        </form>
+        <GuessForm
+          showIncorrect={guessState === "incorrect"}
+          handleSubmit={handleSubmit}
+        />
       )}
       {guessState === "correct" && (
         <div className="flex flex-col gap-2 text-center">
