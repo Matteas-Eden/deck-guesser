@@ -15,6 +15,8 @@ This is that game, but now digitally.
 2. You'll be presented with a random card from a deck
 3. Guess the commander of the deck
 
+For reference, all cards are taken from the decks on my Moxfield account: https://moxfield.com/users/Mattix
+
 ## Development
 
 The site is built with [Next.js](https://nextjs.org/) and [Deno](https://deno.com/), leveraging the Moxfield and Scryfall APIs. Shout-out to the unofficial [Moxfield API](https://github.com/MarioMH8/moxfield-api), without which this would've been a lot more difficult.
