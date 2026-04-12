@@ -33,7 +33,10 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({
       ? commander.flavor_name.split(",")[0]
       : commander.name.split(",")[0];
 
-    if (commanderName.toLowerCase().includes(guess.toLowerCase()) && !!guess) {
+    if (
+      commanderName.toLowerCase().startsWith(guess.toLowerCase()) &&
+      !!guess
+    ) {
       setGuessState("correct");
       return;
     }
