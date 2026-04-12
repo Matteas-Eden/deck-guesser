@@ -62,7 +62,7 @@ export const DeckGuesser: React.FC<DeckGuesserProps> = ({
           className="flex flex-col justify-center gap-2"
         >
           <input
-            className="border-2 border-ctp-white rounded-xl p-2"
+            className="border-2 border-ctp-surface2 hover:border-ctp-text focus:border-ctp-text rounded-xl p-2 h-12 w-full border-solid bg-ctp-mantle font-(family-name:--font-geist-sans) [outline:none]"
             type="text"
             name="guess"
             autoFocus

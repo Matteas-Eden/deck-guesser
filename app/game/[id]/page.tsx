@@ -23,7 +23,7 @@ const Game: React.FC<GameProps> = async ({ params }) => {
   const commander = Object.values(deck.boards.commanders.cards)[0].card;
 
   return (
-    <div className="flex flex-col items-center justify-center h-full gap-2">
+    <div className="flex flex-col items-center justify-center h-full gap-4">
       <h1 className="text-4xl font-bold text-center">
         Can you name the commander?
       </h1>
