@@ -2,6 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  turbopack: {
+    resolveAlias: {
+      "moxfield-api": "./node_modules/moxfield-api/dist/moxfield-api.mjs",
+    },
+  },
   images: {
     remotePatterns: [
       {
