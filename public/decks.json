@@ -41,10 +41,6 @@
       "id": "k3xft0CL40eXJrkYYjrRpg"
     },
     {
-      "name": "Kykar, Wind's Fury",
-      "id": "TP197XwM_0qzpifP64XNrA"
-    },
-    {
       "name": "Loot, Exuberant Explorer",
       "id": "gfqHyml03UK9APRWsA50-g"
     },
@@ -91,6 +87,10 @@
     {
       "name": "Yorion, Sky Nomad",
       "id": "rKQRJhuZOEaWIT_EuDhV_Q"
+    },
+    {
+      "name": "Prismari, the Inspiration",
+      "id": "WBSkVfQ52EuipQvBNtDkKg"
     }
   ]
 }
