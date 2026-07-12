@@ -20,6 +20,11 @@ const Game: React.FC<GameProps> = async ({ params }) => {
   // eslint-disable-next-line react-hooks/purity
   const randomCard = cards[Math.floor(Math.random() * cards.length)].card;
 
+  // Avoid type warning about this being potentially undefined
+  if (!deck.boards.commanders) {
+    throw Error();
+  }
+
   const commander = Object.values(deck.boards.commanders.cards)[0].card;
 
   return (

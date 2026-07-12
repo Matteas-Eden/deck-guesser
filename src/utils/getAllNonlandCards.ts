@@ -1,6 +1,8 @@
 import { DeckListType } from "moxfield-api";
 
 export const getAllNonlandCards = (deck: DeckListType) => {
+  if (!deck.boards.mainboard) return [];
+
   const cards = deck.boards.mainboard.cards;
 
   const cardEntries = Object.values(cards);
