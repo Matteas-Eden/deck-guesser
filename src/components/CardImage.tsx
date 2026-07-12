@@ -11,7 +11,7 @@ export const CardImage = ({ src, alt }: CardImageProps) => {
     <Image
       src={src}
       placeholder={MTGCardBackBase64}
-      height={480}
+      height={490}
       width={350}
       alt={alt}
       className="rounded-2xl"
