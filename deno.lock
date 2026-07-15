@@ -8,6 +8,7 @@
     "npm:@types/react@19": "19.2.14",
     "npm:eslint-config-next@16.2.2": "16.2.2_eslint@9.39.4_typescript@5.9.3",
     "npm:eslint@9": "9.39.4",
+    "npm:mana-font@1": "1.18.0",
     "npm:moxfield-api@2": "2.0.0",
     "npm:next@16.2.2": "16.2.2_react@19.2.4_react-dom@19.2.4__react@19.2.4",
     "npm:postcss@^8.5.8": "8.5.8",
@@ -2059,6 +2060,9 @@
         "@jridgewell/sourcemap-codec"
       ]
     },
+    "mana-font@1.18.0": {
+      "integrity": "sha512-PKCR5z/eeOBbox0Lu5b6A0QUWVUUa3A3LWXb9sw4N5ThIWXxRbCagXPSL4k6Cnh2Fre6Y4+2Xl819OrY7m1cUA=="
+    },
     "math-intrinsics@1.1.0": {
       "integrity": "sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g=="
     },
@@ -2838,6 +2842,7 @@
         "npm:@types/react@19",
         "npm:eslint-config-next@16.2.2",
         "npm:eslint@9",
+        "npm:mana-font@1",
         "npm:moxfield-api@2",
         "npm:next@16.2.2",
         "npm:postcss@^8.5.8",

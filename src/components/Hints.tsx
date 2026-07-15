@@ -8,16 +8,33 @@ interface HintsProps {
 export const Hints: React.FC<HintsProps> = ({ commanderCard }) => {
   const [showHints, setShowHints] = useState(false);
 
+  const colorMap: Record<string, string> = {
+    W: "ms-w",
+    U: "ms-u",
+    B: "ms-b",
+    R: "ms-r",
+    G: "ms-g",
+  };
+
+  const getManaSymbols = (colors: string[]) => {
+    return colors.map((color) => colorMap[color] || "");
+  };
+
   return (
     <>
       {showHints ? (
-        <div className="text-center text-sm border-2 border-ctp-mauve-500 rounded-lg">
-          Color Identity: {commanderCard.color_identity}
+        <div className="text-center text-sm border-2 border-ctp-mauve-500 rounded-lg p-2">
+          <div className="flex items-baseline justify-center gap-1">
+            <p className="mb-2">Color Identity:</p>
+            {getManaSymbols(commanderCard.color_identity).map((symbol, i) => (
+              <i key={i} className={`ms ${symbol} text-2xl`}></i>
+            ))}
+          </div>
         </div>
       ) : (
         <button
           onClick={() => setShowHints(!showHints)}
-          className="text-sm border-2 border-ctp-maroon-500 rounded-lg"
+          className="text-sm border-2 border-ctp-maroon-500 rounded-lg px-4 py-2"
         >
           Show Hint
         </button>

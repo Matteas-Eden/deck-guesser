@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import "mana-font/css/mana.css";
 import "./globals.css";
 
 const geistSans = Geist({
