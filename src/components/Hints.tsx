@@ -16,8 +16,14 @@ export const Hints: React.FC<HintsProps> = ({ commanderCard }) => {
     G: "ms-g",
   };
 
+  // Enforce WUBRG order (White, Blue, Black, Red, Green)
+  const wubrgOrder = ["W", "U", "B", "R", "G"];
+
   const getManaSymbols = (colors: string[]) => {
-    return colors.map((color) => colorMap[color] || "");
+    const colorSet = new Set(colors);
+    return wubrgOrder
+      .filter((color) => colorSet.has(color))
+      .map((color) => colorMap[color]);
   };
 
   return (
@@ -27,7 +33,7 @@ export const Hints: React.FC<HintsProps> = ({ commanderCard }) => {
           <div className="flex items-baseline justify-center gap-1">
             <p className="mb-2">Color Identity:</p>
             {getManaSymbols(commanderCard.color_identity).map((symbol, i) => (
-              <i key={i} className={`ms ${symbol} text-2xl`}></i>
+              <i key={i} className={`ms ms-cost ${symbol} text-2xl`}></i>
             ))}
           </div>
         </div>
